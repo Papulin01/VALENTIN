@@ -2,8 +2,8 @@
 
 const titleElement = document.querySelector(".title");
 const buttonsContainer = document.querySelector(".buttons");
-const yesButton = document.querySelector(".btn--SI");
-const noButton = document.querySelector(".btn--NO");
+const SIButton = document.querySelector(".btn--SI");
+const NOButton = document.querySelector(".btn--NO");
 const catImg = document.querySelector(".cat-img");
 
 const MAX_IMAGES = 5;
@@ -11,15 +11,15 @@ const MAX_IMAGES = 5;
 let play = true;
 let noCount = 0;
 
-yesButton.addEventListener("click", handleYesClick);
+SIButton.addEventListener("click", handleSIClick);
 
-noButton.addEventListener("click", function () {
+NOButton.addEventListener("click", function () {
   if (play) {
     noCount++;
     const imageIndex = Math.min(noCount, MAX_IMAGES);
     changeImage(imageIndex);
-    resizeYesButton();
-    updateNoButtonText();
+    resizeSIButton();
+    updateNOButtonText();
     if (noCount === MAX_IMAGES) {
       play = false;
     }
