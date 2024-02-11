@@ -29,7 +29,7 @@ noButton.addEventListener("click", function () {
 function handleYesClick() {
   titleElement.innerHTML = "AQUI EN MI CORAZON TU MANDA Y TU PONES LAS CONDICIONES CHEKETETA";
   buttonsContainer.classList.add("hidden");
-  changeImage("yes");
+  changeImage("SI");
 }
 
 function resizeYesButton() {
