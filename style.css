@@ -57,11 +57,11 @@ body {
   display: inline-block;
 }
 
-.btn--yes {
+.btn--SI {
   background-color: #40c057;
 }
 
-.btn--no {
+.btn--NO {
   background-color: #f03e3e;
 }
 
