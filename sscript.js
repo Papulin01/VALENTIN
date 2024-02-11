@@ -16,8 +16,8 @@ yesButton.addEventListener("click", handleYesClick);
 noButton.addEventListener("click", function () {
   if (play) {
     noCount++;
-    const imageIndex(1) = Math.min(noCount, MAX_IMAGES);
-    changeImage(imageIndex(1));
+    const imageIndex= Math.min(noCount, MAX_IMAGES);
+    changeImage(imageIndex);
     resizeYesButton();
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
