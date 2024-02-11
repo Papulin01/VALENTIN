@@ -11,15 +11,15 @@ const MAX_IMAGES = 5;
 let play = true;
 let noCount = 0;
 
-SIButton.addEventListener("click", handleSIClick);
+YessButton.addEventListener("click", handleSIClick);
 
-NOButton.addEventListener("click", function () {
+NoButton.addEventListener("click", function () {
   if (play) {
     noCount++;
     const imageIndex = Math.min(noCount, MAX_IMAGES);
     changeImage(imageIndex);
-    resizeSIButton();
-    updateNOButtonText();
+    resizeYESButton();
+    updateNoButtonText();
     if (noCount === MAX_IMAGES) {
       play = false;
     }
