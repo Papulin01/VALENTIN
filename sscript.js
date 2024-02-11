@@ -6,7 +6,7 @@ const yesButton = document.querySelector(".btn--yes");
 const noButton = document.querySelector(".btn--no");
 const catImg = document.querySelector(".cat-img");
 
-const MAX_IMAGES = 5;
+const MAX_IMAGES= 5;
 
 let play = true;
 let noCount = 0;
@@ -29,7 +29,7 @@ noButton.addEventListener("click", function () {
 function handleYesClick() {
   titleElement.innerHTML = "AQUI EN MI CORAZON TU MANDA Y TU PONES LAS CONDICIONES CHEKETETA";
   buttonsContainer.classList.add("hidden");
-  changeImage("SI");
+  changeImage("yes");
 }
 
 function resizeYesButton() {
