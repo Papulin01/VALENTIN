@@ -2,8 +2,8 @@
 
 const titleElement = document.querySelector(".title");
 const buttonsContainer = document.querySelector(".buttons");
-const SIButton = document.querySelector(".btn--SI");
-const NOButton = document.querySelector(".btn--NO");
+const yesButton = document.querySelector(".btn--yes");
+const noButton = document.querySelector(".btn--no");
 const catImg = document.querySelector(".cat-img");
 
 const MAX_IMAGES = 5;
@@ -11,14 +11,14 @@ const MAX_IMAGES = 5;
 let play = true;
 let noCount = 0;
 
-SIButton.addEventListener("click", handleSIClick);
+yesButton.addEventListener("click", handleYesClick);
 
-NOButton.addEventListener("click", function () {
+noButton.addEventListener("click", function () {
   if (play) {
     noCount++;
     const imageIndex = Math.min(noCount, MAX_IMAGES);
     changeImage(imageIndex);
-    resizeYESButton();
+    resizeYesButton();
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
       play = false;
@@ -26,18 +26,18 @@ NOButton.addEventListener("click", function () {
   }
 });
 
-function handleSIClick() {
+function handleYesClick() {
   titleElement.innerHTML = "AQUI EN MI CORAZON TU MANDA Y TU PONES LAS CONDICIONES CHEKETETA";
   buttonsContainer.classList.add("hidden");
-  changeImage("SI");
+  changeImage("yes");
 }
 
-function resizeSIButton() {
-  const computedStyle = window.getComputedStyle(SIButton);
+function resizeYesButton() {
+  const computedStyle = window.getComputedStyle(yesButton);
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
   const newFontSize = fontSize * 1.6;
 
-  SIButton.style.fontSize = `${newFontSize}px`;
+  yesButton.style.fontSize = `${newFontSize}px`;
 }
 
 function generateMessage(noCount) {
@@ -58,6 +58,6 @@ function changeImage(image) {
   catImg.src = `img/cat-${image}.jpg`;
 }
 
-function updateNOButtonText() {
-  NOButton.innerHTML = generateMessage(noCount);
+function updateNoButtonText() {
+  noButton.innerHTML = generateMessage(noCount);
 }
