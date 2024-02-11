@@ -27,7 +27,7 @@ noButton.addEventListener("click", function () {
 });
 
 function handleYesClick() {
-  titleElement.innerHTML = "AQUI EN MI CORAZON TU MANDA Y TU PONES LAS CONDICIONES CHEKETETA";
+  titleElement.innerHTML = "AQUI EN MI CORAZON TU MANDAS Y TU PONES LAS CONDICIONES CHEKETETA";
   buttonsContainer.classList.add("hidden");
   changeImage("yes");
 }
