@@ -11,9 +11,9 @@ const MAX_IMAGES = 5;
 let play = true;
 let noCount = 0;
 
-YessButton.addEventListener("click", handleSIClick);
+SIButton.addEventListener("click", handleSIClick);
 
-NoButton.addEventListener("click", function () {
+NOButton.addEventListener("click", function () {
   if (play) {
     noCount++;
     const imageIndex = Math.min(noCount, MAX_IMAGES);
@@ -58,6 +58,6 @@ function changeImage(image) {
   catImg.src = `img/cat-${image}.jpg`;
 }
 
-function updateNoButtonText() {
-  noButton.innerHTML = generateMessage(noCount);
+function updateNOButtonText() {
+  NOButton.innerHTML = generateMessage(noCount);
 }
