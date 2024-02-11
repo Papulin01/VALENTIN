@@ -26,18 +26,18 @@ noButton.addEventListener("click", function () {
   }
 });
 
-function handleYesClick() {
+function handleSIClick() {
   titleElement.innerHTML = "AQUI EN MI CORAZON TU MANDA Y TU PONES LAS CONDICIONES CHEKETETA";
   buttonsContainer.classList.add("hidden");
   changeImage("SI");
 }
 
-function resizeYesButton() {
-  const computedStyle = window.getComputedStyle(yesButton);
+function resizeSIButton() {
+  const computedStyle = window.getComputedStyle(SIButton);
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
   const newFontSize = fontSize * 1.6;
 
-  yesButton.style.fontSize = `${newFontSize}px`;
+  SIButton.style.fontSize = `${newFontSize}px`;
 }
 
 function generateMessage(noCount) {
